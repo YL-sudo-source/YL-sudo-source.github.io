@@ -1,3 +1,6 @@
+---
+layout: default
+---
 
 <div class="card-container">
   {% for post in site.posts %}
