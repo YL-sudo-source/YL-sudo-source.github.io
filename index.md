@@ -1,4 +1,3 @@
-<h1>游戏</h1>
 
 <div class="card-container">
   {% for post in site.posts %}
