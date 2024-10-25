@@ -1,4 +1,4 @@
-<h1>欢迎来到我的博客</h1>
+<h1>游戏</h1>
 
 <div class="card-container">
   {% for post in site.posts %}
