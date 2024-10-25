@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <title>{{ page.title }}</title>
+  <link rel="stylesheet" href="/assets/styles.css">
+</head>
+<body>
+  <header>
+    <h1>{{ site.title }}</h1>
+    <nav>
+      <ul>
+        <li><a href="/">首页</a></li>
+        <li><a href="/about.html">关于我</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    {{ content }}  <!-- 渲染 index.md 的内容 -->
+  </main>
+  <footer>
+    <p>© {{ site.time | date: '%Y' }} 我的博客</p>
+  </footer>
+</body>
+</html>
