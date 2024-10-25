@@ -1,0 +1,34 @@
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .card {
+    border: 1px solid #ccc;
+    margin: 10px;
+    padding: 10px;
+    width: calc(33% - 20px); /* 默认3列布局 */
+  }
+  
+  .tag {
+    display: inline-block;
+    margin-right: 5px;
+    padding: 5px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+  }
+  
+  /* 响应式设计 */
+  @media (max-width: 768px) {
+    .card {
+      width: calc(50% - 20px); /* 中等屏幕下2列布局 */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .card {
+      width: 100%; /* 小屏幕下单列布局 */
+    }
+  }
+  
