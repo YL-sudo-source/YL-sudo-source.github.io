@@ -146,12 +146,6 @@
     {{- end }}
 </noscript>
 
-<head>
-    {{- if not .Site.IsServer }}
-        {{ template "_internal/google_analytics.html" . }}
-    {{- end }}
-</head>
-
 {{- partial "extend_head.html" . -}}
 
 {{- /* Misc */}}
