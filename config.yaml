@@ -5,17 +5,34 @@ theme: PaperMod
 
 params:    
   homeInfoParams:
-    Title: "Hey Guys 👋"
-    Content: >
+    Title: "Hey Guys 👋"   # 表情\U0001F44B
+    Content: Welcome to my blog
 
     #  ● [SonnyCalcr's Notion](https://sonnycalcr.notion.site/)
     #  <br>
     #  ● [博客园](https://www.cnblogs.com/SonnyCalcr)
 
+  analytics:
+    google:
+      MeasurementId: "G-PN8KQH4GE4"
+      
   socialIcons:
       - name: Bilibili
         title: 关注 B 站帐号
         url: "https://space.bilibili.com/3546768440559829?spm_id_from=333.1007.0.0"
+      - name: github
+        url: "https://github.com/YL-sudo-source/YL-sudo-source.github.io"
+      - name: 1
+        url: "https://yl-sudo-source.github.io/"
+
+
+  analytics:
+    google:
+      SiteVerificationTag: ""
+    bing:
+      SiteVerificationTag: "XYZabc"
+    yandex:
+      SiteVerificationTag: "XYZabc"
 
   # env: production # to enable google analytics, opengraph, twitter-cards and schema.
   # description: "Theme PaperMod - https://github.com/adityatelange/hugo-PaperMod"
@@ -42,7 +59,7 @@ params:
   assets:
     # disableHLJS: true # to disable highlight.js
     # disableFingerprinting: true
-    favicon: "img/favicon.ico"
+    favicon: "img/favicon.ico"                    #网站的图标
     favicon16x16: "img/favicon-16x16.png"
     favicon32x32: "img/favicon-32x32.png"
     apple_touch_icon: "img/apple-touch-icon.png"
@@ -60,6 +77,13 @@ params:
       # limit: 10 # refer: https://www.fusejs.io/api/methods.html#search
       keys: ["title", "permalink", "summary", "content"]
       includeMatches: true
+
+services:
+  googleAnalytics:
+    ID: G-PN8KQH4GE4
+
+
+
 
 menu:
   main:
