@@ -26,13 +26,6 @@ params:
         url: "https://yl-sudo-source.github.io/"
 
 
-  analytics:
-    google:
-      SiteVerificationTag: ""
-    bing:
-      SiteVerificationTag: "XYZabc"
-    yandex:
-      SiteVerificationTag: "XYZabc"
 
   # env: production # to enable google analytics, opengraph, twitter-cards and schema.
   # description: "Theme PaperMod - https://github.com/adityatelange/hugo-PaperMod"
@@ -63,7 +56,7 @@ params:
     favicon16x16: "img/favicon-16x16.png"
     favicon32x32: "img/favicon-32x32.png"
     apple_touch_icon: "img/apple-touch-icon.png"
-    safari_pinned_tab: "img/safari-pinned-tab.svg"
+    # safari_pinned_tab: "img/safari-pinned-tab.svg"
 
   params:
   # 搜索
