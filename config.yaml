@@ -3,6 +3,10 @@ languageCode: zh-cn
 title: My New Hugo Site
 theme: PaperMod
 
+services:
+  googleAnalytics:
+    id: G-MEASUREMENT_ID
+
 params:    
   homeInfoParams:
     Title: "Hey Guys 👋"   # 表情\U0001F44B
@@ -12,9 +16,6 @@ params:
     #  <br>
     #  ● [博客园](https://www.cnblogs.com/SonnyCalcr)
 
-  analytics:
-    google:
-      MeasurementId: "G-DWRBNRT80B"
       
   socialIcons:
       - name: Bilibili
