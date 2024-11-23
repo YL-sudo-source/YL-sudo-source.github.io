@@ -14,7 +14,7 @@ params:
 
   analytics:
     google:
-      MeasurementId: "G-PN8KQH4GE4"
+      MeasurementId: "G-DWRBNRT80B"
       
   socialIcons:
       - name: Bilibili
@@ -71,9 +71,6 @@ params:
       keys: ["title", "permalink", "summary", "content"]
       includeMatches: true
 
-services:
-  googleAnalytics:
-    ID: G-PN8KQH4GE4
 
 
 
