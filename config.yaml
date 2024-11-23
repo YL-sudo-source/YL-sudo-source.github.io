@@ -20,12 +20,12 @@ params:
   # env: production # to enable google analytics, opengraph, twitter-cards and schema.
   # description: "Theme PaperMod - https://github.com/adityatelange/hugo-PaperMod"
   # author: Sonny Calcr         # 作者名称       
-  defaultTheme: white # 默认是暗色背景
+  defaultTheme: auto # dark, light     设置网站的默认主题   根据系统设置自动切换为深色或浅色主题
   # ShowShareButtons: false  # 是否展示分享按钮              
   ShowReadingTime: true # 展示预估的阅读时长
   # displayFullLangName: true #   展示全名                                                      
   ShowPostNavLinks: true # 展示文章导航链接，就是下一页上一页的那个
-  ShowBreadCrumbs: false # 是否展示标题上方的面包屑
+  # ShowBreadCrumbs: false # 是否展示标题上方的面包屑
   # ShowCodeCopyButtons: true # 是否展示复制代码的按钮
   # ShowRssButtonInSectionTermList: true # RSS 相关
   # ShowAllPagesInArchive: true # 在归档页面展示所有的页面
@@ -34,8 +34,19 @@ params:
   enableEmoji: true # 允许 emoji
   enableRobotsTXT: true # 允许 robots.txt
   comments: true # 评论
+
+  hideSummary:  true          #是否隐藏文章的摘要
   # images: ["https://i.postimg.cc/7hwBy7VS/calcr.png"] # 缺省的图片，比如，博客的封面
-  # DateFormat: "2006-01-02" # 这个时间是作者自己写的，只能这样写
+  DateFormat: "2006-01-02" # 这个时间是作者自己写的，只能这样写
+
+  assets:
+    # disableHLJS: true # to disable highlight.js
+    # disableFingerprinting: true
+    favicon: "img/favicon.ico"
+    favicon16x16: "img/favicon-16x16.png"
+    favicon32x32: "img/favicon-32x32.png"
+    apple_touch_icon: "img/apple-touch-icon.png"
+    safari_pinned_tab: "img/safari-pinned-tab.svg"
 
   params:
   # 搜索
