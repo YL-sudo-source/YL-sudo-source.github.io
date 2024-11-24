@@ -33,7 +33,7 @@ params:
     bing:
       SiteVerificationTag: ""
     yandex:
-      SiteVerificationTag: "XYZabc"
+      SiteVerificationTag: ""
 
   # env: production # to enable google analytics, opengraph, twitter-cards and schema.
   # description: "Theme PaperMod - https://github.com/adityatelange/hugo-PaperMod"
@@ -51,6 +51,7 @@ params:
   # ShowToc: true # 展示文章详情页的目录
   enableEmoji: true # 允许 emoji
   enableRobotsTXT: true # 允许 robots.txt
+  enableSitemap: true # 允许 sitemap.xml
   comments: true # 评论
 
   hideSummary:  true          #是否隐藏文章的摘要
