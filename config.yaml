@@ -7,7 +7,6 @@ services:
   googleAnalytics:
     ID: G-DWRBNRT80B
 
-
 params:    
   homeInfoParams:
     Title: "Hey Guys 👋"   # 表情\U0001F44B
@@ -17,6 +16,7 @@ params:
     #  <br>
     #  ● [博客园](https://www.cnblogs.com/SonnyCalcr)
 
+      
   socialIcons:
       - name: Bilibili
         title: 关注 B 站帐号
@@ -64,7 +64,7 @@ params:
     favicon16x16: "img/favicon-16x16.png"
     favicon32x32: "img/favicon-32x32.png"
     apple_touch_icon: "img/apple-touch-icon.png"
-    safari_pinned_tab: "img/safari-pinned-tab.svg"
+    # safari_pinned_tab: "img/safari-pinned-tab.svg"
 
   params:
   # 搜索
@@ -80,10 +80,6 @@ params:
       includeMatches: true
 
 
-
-
-
-
 menu:
   main:
     - identifier: home
@@ -93,19 +89,19 @@ menu:
     - identifier: categories
       name: 分类
       url: /categories/
-      weight: 10
+      weight: 2
     - identifier: tags
       name: 标签
       url: /tags/
-      weight: 20
+      weight: 3
     - identifier: archives
       name: 归档
       url: /archives/
-      weight: 30
+      weight: 4
     - identifier : search
       name: 搜索
       pageRef: search/
-      weight: 40  
+      weight: 5  
 
 # https://github.com/adityatelange/hugo-PaperMod/wiki/Features#search-page
 outputs:
@@ -129,3 +125,4 @@ markup:
     # 这里设置 style 没用，得自己加 css
     # style: "github-dark"
     # style: monokai
+
