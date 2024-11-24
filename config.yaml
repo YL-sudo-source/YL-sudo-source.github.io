@@ -1,6 +1,7 @@
 baseURL: ""
 languageCode: zh-cn
 title: My New Hugo Site
+# paginate: 5
 theme: PaperMod
 
 services:
@@ -67,16 +68,15 @@ params:
     apple_touch_icon: "img/apple-touch-icon.png"
     # safari_pinned_tab: "img/safari-pinned-tab.svg"
 
-  params:
   # 搜索
   fuseOpts:
       isCaseSensitive: false # 是否大小写敏感
       shouldSort: true # 是否排序
       location: 0
       distance: 1000
-      threshold: 0.4
+      threshold: 0.4              # 0.0 - 1.0 定义搜索结果的阈值，数值越低，搜索结果的匹配越严格
       minMatchCharLength: 0
-      # limit: 10 # refer: https://www.fusejs.io/api/methods.html#search
+      limit: 50 # refer: https://www.fusejs.io/api/methods.html#search
       keys: ["title", "permalink", "summary", "content"]
       includeMatches: true
 
