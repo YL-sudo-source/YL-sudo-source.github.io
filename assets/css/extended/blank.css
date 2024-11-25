@@ -31,21 +31,21 @@
     max-width: 100%;  /* 最大宽度为容器宽度 */
     height: auto;     /* 高度自动调整，保持图片的纵横比 */
     display: block;   /* 使图片成为块级元素，避免下方有空隙 */
-    margin: 5px ; /* 上下有间距，左右居中 margin: 5px auto */
+    margin: 10px ; /* 上下有间距，左右居中 margin: 5px auto */
     /*  width: 80%;  /* 图片宽度为父容器的 80% */
 }
 
 /* 行文风格 */
 body {
     font-family: -apple-system, BlinkMacSystemFont, "Avenir Next", Avenir, "Nimbus Sans L", Roboto, Noto, "Segoe UI", Arial, Helvetica, "Helvetica Neue", sans-serif;
-    font-size: 1rem;
-    line-height: 0.9;    /* 设置文本的行高为 1.8，它决定了行与行之间的垂直间距，使文本不至于过于紧凑*/
+    font-size: 1rem;     /* 设置文本的默认字体大小为 1rem，即 16px */
+    line-height: 1.2;    /* 设置文本的行高为 1.8，它决定了行与行之间的垂直间距，使文本不至于过于紧凑*/
     margin: 0;
 }
 
 /* 调整正文部分（如段落、引用、标题、图片等）的间距、字体样式和布局。设置标题的字体加粗，引用文本颜色为灰色，并确保各元素之间有适当的间距 */
 .post-content {
-    padding-top: 1rem;
+    padding-top: 0.0rem;    /* 顶部留白  上边框之间的内边距距离 */  
 }
 .post-content blockquote {
     color: #808080;
@@ -75,9 +75,9 @@ body {
     font-weight: 600;
 }
 .post-content h1 {
-    font-size: 2.6rem;
-    margin-top: 4rem;
-    border-bottom: 1px solid #ccc;
+    font-size: 1.6rem;                  /* 设置 h1 标题的字体大小为 2.6rem，即 41.6px */
+    margin-top: 1rem;                   /* 设置 h1 标题的上外边距为 4rem，即 64px */
+    border-bottom: 1px solid #ccc;    /* 设置 h1 标题的下边框为 1px 实线，颜色为 #ccc */
 }
 .post-content h2 {
     font-size: 1.8rem;
@@ -100,19 +100,13 @@ body {
     font-size: 1rem;
     margin-top: 1rem;
 }
-/* GitHub 样式的表格 */
-.post-content table tr {
-    border: 1px solid #979da3 !important;
-}
-.post-content table tr:nth-child(2n),
-.post-content thead {
-    background-color: var(--code-bg);
-}
-.post-content table th {
-    border: 1px solid #979da3 !important;
-}
-.post-content table td {
-    border: 1px solid #979da3 !important;
+
+.post-title.entry-hint-parent {
+    font-size: 1rem; /* 设置字体大小，例如2倍根字体大小 */
+    line-height: 1.5; /* 控制行高，通常设置为1.5倍字体大小 */
+    margin: 1rem 0; /* 设置上下外边距，调整与其他内容的距离 */
+    font-weight: bold; /* 字体加粗 */
+    color: #e8ec0e; /* 设置字体颜色 */
 }
 
 
@@ -120,6 +114,10 @@ body {
     --nav-width: 1380px;
     --article-width: 650px;
     --toc-width: 300px;
+}
+
+article.first-entry.home-info {
+    margin: 0;  /* 调整边距或删除 */
 }
 
 /* 目录 */

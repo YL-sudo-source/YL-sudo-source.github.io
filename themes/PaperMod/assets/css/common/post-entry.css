@@ -3,7 +3,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    min-height: 320px;
+    min-height: 0px;
     margin: var(--gap) 0 calc(var(--gap) * 2) 0;
 }
 
@@ -43,8 +43,8 @@
     border: 1px solid var(--border);
 }
 
-.post-entry:active {
-    transform: scale(0.96);
+.post-entry:active {                                    
+    transform: scale(0.96);                         
 }
 
 .tag-entry .entry-cover {
@@ -52,7 +52,7 @@
 }
 
 .entry-header h2 {
-    font-size: 24px;
+    font-size: 24px; 
     line-height: 1.3;
 }
 
