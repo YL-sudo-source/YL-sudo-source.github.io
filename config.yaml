@@ -101,10 +101,15 @@ menu:
       name: 归档
       url: /archives/
       weight: 4
+    - identifier : 写真
+      name: 写真
+      pageRef: 写真/
+      weight: 6  
     - identifier : search
       name: 搜索
       pageRef: search/
-      weight: 5  
+      weight: 10  
+
 
 # https://github.com/adityatelange/hugo-PaperMod/wiki/Features#search-page
 outputs:
