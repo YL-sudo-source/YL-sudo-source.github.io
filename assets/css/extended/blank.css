@@ -102,11 +102,11 @@ body {
 }
 
 .post-title.entry-hint-parent {
-    font-size: 1rem; /* 设置字体大小，例如2倍根字体大小 */
+    font-size: 1.3rem; /* 设置字体大小，例如2倍根字体大小 */
     line-height: 1.5; /* 控制行高，通常设置为1.5倍字体大小 */
     margin: 1rem 0; /* 设置上下外边距，调整与其他内容的距离 */
     font-weight: bold; /* 字体加粗 */
-    color: #e8ec0e; /* 设置字体颜色 */
+    color: #ec0e0e; /* 设置字体颜色 */
 }
 
 

@@ -30,6 +30,8 @@
 </header>
 {{- end }}
 
+
+
 {{- if .Content }}
 <div class="post-content">
   {{- if not (.Param "disableAnchoredHeadings") }}
@@ -79,6 +81,23 @@
       {{- end }}
     </h2>
   </header>
+<!-- 在文章列表中显示标签tag -->
+  {{- if .Params.tags }}
+  <div class="tags" style="padding: 2px;">
+    <div style="display: flex; flex-wrap: wrap; justify-content: flex-end; margin-top: 5px;">
+      {{ range .Params.tags }}
+      <a href="/tags/{{ . | urlize }}" style="margin-right: 5px; 
+                  color: white; 
+                  background-color: rgb(55, 162, 121); 
+                  border-radius: 6px; 
+                  padding: 1px 12px; ">
+        #{{ . }}
+      </a>
+      {{ end }}
+    </div>
+  </div>
+  {{- end }}
+
   {{- if (ne (.Param "hideSummary") true) }}
   <div class="entry-content">
     <p>{{ .Summary | plainify | htmlUnescape }}{{ if .Truncated }}...{{ end }}</p>
@@ -89,6 +108,7 @@
     {{- partial "post_meta.html" . -}}
   </footer>
   {{- end }}
+  
   <a class="entry-link" aria-label="post link to {{ .Title | plainify }}" href="{{ .Permalink }}" target="_blank" rel="noopener"></a>
 </article>
 {{- end }}

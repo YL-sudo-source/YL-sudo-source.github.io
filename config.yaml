@@ -36,6 +36,10 @@ params:
     yandex:
       SiteVerificationTag: ""
 
+  excludeFromHome:
+   # - 写真
+
+
   # env: production # to enable google analytics, opengraph, twitter-cards and schema.
   # description: "Theme PaperMod - https://github.com/adityatelange/hugo-PaperMod"
   # author: Sonny Calcr         # 作者名称       
