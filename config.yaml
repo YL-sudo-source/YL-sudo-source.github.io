@@ -58,6 +58,7 @@ params:
   enableRobotsTXT: true # 允许 robots.txt
   enableSitemap: true # 允许 sitemap.xml
   comments: true # 评论
+  # ShowRelatedContent: true # 展示相关内容
   # UseHugoToc: true                    #是否使用 Hugo 自动生成的目录
   # toc: true                           # 主题目录功能    关闭 UseHugoToc 后，这个才有效
 
@@ -105,9 +106,9 @@ menu:
       name: 归档
       url: /archives/
       weight: 4
-    - identifier : 写真
-      name: 写真
-      pageRef: 写真/
+    - identifier : 图集
+      name: 图集
+      pageRef: 图集/
       weight: 6  
     - identifier : search
       name: 搜索

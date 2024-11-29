@@ -48,10 +48,10 @@
 {{- end }}
 
 {{- $paginator := .Paginate $pages }}
-
+<!--  首页的介绍  homeInfoParams -->
 {{- if and .IsHome site.Params.homeInfoParams (eq $paginator.PageNumber 1) }}
 {{- partial "home_info.html" . }}
-{{- end }}
+{{- end }} 
 
 {{- $term := .Data.Term }}
 {{- range $index, $page := $paginator.Pages }}
@@ -88,7 +88,7 @@
       {{ range .Params.tags }}
       <a href="/tags/{{ . | urlize }}" style="margin-right: 5px; 
                   color: white; 
-                  background-color: rgb(55, 162, 121); 
+                  background-color: rgb(109, 127, 37); 
                   border-radius: 6px; 
                   padding: 1px 12px; ">
         #{{ . }}
