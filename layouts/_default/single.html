@@ -41,6 +41,15 @@
     {{- else }}{{ .Content }}{{ end }}
   </div>
   {{- end }}
+  
+  <!-- Related Section -->
+  <div class="pagination__title">
+    <span class="pagination__title-h">{{ .Site.Params.relatedTitle | default "Related" }}</span>
+    <hr />
+  </div>
+
+  {{ partial "related.html" . }}
+  <!-- /Related Section -->
 
   <footer class="post-footer">
     {{- $tags := .Language.Params.Taxonomies.tag | default "tags" }}

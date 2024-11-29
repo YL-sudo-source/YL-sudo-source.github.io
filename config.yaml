@@ -58,7 +58,7 @@ params:
   enableRobotsTXT: true # 允许 robots.txt
   enableSitemap: true # 允许 sitemap.xml
   comments: true # 评论
-  # ShowRelatedContent: true # 展示相关内容
+  related: true           # 是否展示相关文章
   # UseHugoToc: true                    #是否使用 Hugo 自动生成的目录
   # toc: true                           # 主题目录功能    关闭 UseHugoToc 后，这个才有效
 
