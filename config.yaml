@@ -36,8 +36,6 @@ params:
     yandex:
       SiteVerificationTag: ""
 
-  excludeFromHome:
-   # - 写真
 
 
   # env: production # to enable google analytics, opengraph, twitter-cards and schema.
@@ -51,7 +49,7 @@ params:
   # ShowBreadCrumbs: false # 是否展示标题上方的面包屑
   ShowCodeCopyButtons: true # 是否展示复制代码的按钮
   # ShowRssButtonInSectionTermList: true # RSS 相关
-  # ShowAllPagesInArchive: true # 在归档页面展示所有的页面
+  ShowAllPagesInArchive: true # 在归档页面展示所有的页面
   ShowPageNums: true # 展示页面的页数
   ShowToc: true # 展示文章详情页的目录
   enableEmoji: true # 允许 emoji

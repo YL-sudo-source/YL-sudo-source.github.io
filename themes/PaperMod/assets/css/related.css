@@ -1,0 +1,57 @@
+/* assets/css/related.css */
+
+/* 为了将相关内容显示在右侧，使用flex布局 */
+.content-wrapper {
+    display: flex;      /* 设置为flex布局 */
+    gap: 30px;          /* 主内容和相关内容之间的间隔 */
+    max-width: 1200px;  /* 控制整体宽度 */
+    margin: 0 auto;     /* 居中 */
+  }
+  
+  .post-single {
+    flex: 1;            /* 主内容区域占据剩余空间 */
+  }
+  
+  .related-content {
+    width: 300px;       /* 设置右侧内容的宽度 */
+    padding: 20px;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* 阴影效果 */
+  }
+  
+  .related-content h3 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+  }
+  
+  .related-content ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .related-content ul li {
+    margin-bottom: 10px;
+  }
+  
+  .related-content ul li a {
+    text-decoration: none;
+    color: #007bff;
+  }
+  
+  .related-content ul li a:hover {
+    text-decoration: underline;
+  }
+  
+  /* 响应式设计：屏幕宽度小于 768px 时，调整布局 */
+  @media (max-width: 768px) {
+    .content-wrapper {
+      flex-direction: column;  /* 小屏幕时堆叠内容 */
+    }
+  
+    .related-content {
+      width: 100%;  /* 在小屏幕上，相关内容占据整个宽度 */
+      margin-top: 20px;  /* 增加间距 */
+    }
+  }
+  
