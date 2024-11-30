@@ -88,14 +88,34 @@ params:
 
 menu:
   main:
-    - identifier: blog
-      name: Blog
+    - identifier: home
+      name: 首页
       url: /
       weight: 1
-    - name: Tags
-      parent: blog
+    - identifier: categories
+      name: 分类
+      url: /categories/
+      weight: 2
+    - identifier: tags
+      name: 标签
       url: /tags/
-      weight: 1
+      weight: 3
+    - identifier: archives
+      name: 归档
+      url: /archives/
+      weight: 4
+    - identifier : Game
+      name: Game
+      url: /game/
+      weight: 8  
+    - identifier : 图集
+      name: 图集
+      pageRef: 图集/
+      weight: 10  
+    - identifier : search
+      name: 搜索
+      pageRef: search/
+      weight: 20  
 
 
 # https://github.com/adityatelange/hugo-PaperMod/wiki/Features#search-page
