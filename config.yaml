@@ -40,7 +40,7 @@ params:
 
   # env: production # to enable google analytics, opengraph, twitter-cards and schema.
   # description: "Theme PaperMod - https://github.com/adityatelange/hugo-PaperMod"
-  # author: Sonny Calcr         # 作者名称       
+  # author: Sonny Calcr         # 作者名称      
   defaultTheme: auto # dark, light     设置网站的默认主题   根据系统设置自动切换为深色或浅色主题
   # ShowShareButtons: false  # 是否展示分享按钮              
   ShowReadingTime: true # 展示预估的阅读时长
@@ -88,30 +88,14 @@ params:
 
 menu:
   main:
-    - identifier: home
-      name: 首页
+    - identifier: blog
+      name: Blog
       url: /
       weight: 1
-    - identifier: categories
-      name: 分类
-      url: /categories/
-      weight: 2
-    - identifier: tags
-      name: 标签
+    - name: Tags
+      parent: blog
       url: /tags/
-      weight: 3
-    - identifier: archives
-      name: 归档
-      url: /archives/
-      weight: 4
-    - identifier : 图集
-      name: 图集
-      pageRef: 图集/
-      weight: 6  
-    - identifier : search
-      name: 搜索
-      pageRef: search/
-      weight: 10  
+      weight: 1
 
 
 # https://github.com/adityatelange/hugo-PaperMod/wiki/Features#search-page
