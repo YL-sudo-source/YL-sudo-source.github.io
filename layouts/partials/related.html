@@ -1,9 +1,25 @@
-{{ $related := .Site.RegularPages.Related . | first 5 }}
+<!-- {{ $related := .Site.RegularPages.Related . | first 5 }}
 {{ with $related }}
-<h3>推荐</h3>
+<h3>推荐</h3> 
 <ul>
 	{{ range . }}
 	<li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
 	{{ end }}
 </ul>
-{{ end }}
+{{ end }} -->
+
+<!-- {{ .Title }} 会使用页面的标题作为链接文本。
+{{ .LinkTitle }} 会使用 front matter 中定义的 linkTitle 作为链接文本（如果没有定义，则回退为 Title）。 -->
+
+
+<div class="related-section">
+	{{ $related := .Site.RegularPages.Related . | first 5 }}
+	{{ with $related }}
+	<!-- <h3>See Also</h3> -->
+	<ul>
+	  {{ range . }}
+	  <li><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></li>
+	  {{ end }}
+	</ul>
+	{{ end }}
+  </div>

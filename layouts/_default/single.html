@@ -42,12 +42,10 @@
   </div>
   {{- end }}
   
-  <!-- Related Section -->
-  <div class="pagination__title">
-    <span class="pagination__title-h">{{ .Site.Params.relatedTitle | default "Related" }}</span>
+  <!-- 推荐部分 Related Section -->
+  <div class="sidebar">
     <hr />
   </div>
-
   {{ partial "related.html" . }}
   <!-- /Related Section -->
 

@@ -92,8 +92,8 @@ menu:
       name: 首页
       url: /
       weight: 1
-    - identifier: categories
-      name: 分类
+    - identifier: 分类
+      name: categories
       url: /categories/
       weight: 2
     - identifier: tags

@@ -110,7 +110,8 @@ lastmod: 2023-02-14T00:40:08+08:00
 ~~~
 img\01\AS.jpg
 # 侧边目录
-1、在项目目录layouts/partials下添加toc.html文件
+## 1、
+在项目目录layouts/partials下添加toc.html文件
 ~~~
 {{- $headers := findRE "<h[1-6].*?>(.|\n])+?</h[1-6]>" .Content -}}
 {{- $has_headers := ge (len $headers) 1 -}}
@@ -268,7 +269,8 @@ img\01\AS.jpg
 {{- end }}
 
 ~~~
-2、在项目目录assets/css/extended下添加blank.css文件，内容如下：
+## 2、
+在项目目录assets/css/extended下添加blank.css文件，内容如下：
 ~~~
 :root {
     --nav-width: 1380px;
@@ -359,7 +361,8 @@ img\01\AS.jpg
 
 ~~~
 # 相关推荐
-1、创建一个 layouts/partials/related.html 文件填写一下代码
+## 1、
+创建一个 layouts/partials/related.html 文件填写一下代码
 ~~~
 {{ $related := .Site.RegularPages.Related . | first 5 }}
 {{ with $related }}
@@ -371,7 +374,8 @@ img\01\AS.jpg
 </ul>
 {{ end }}
 ~~~
-2、在 layouts/_default/single.html 文件中添加
+## 2、
+在 layouts/_default/single.html 文件中添加
 ~~~
     <!-- Related -->
     <div class="pagination__title">
@@ -384,7 +388,8 @@ img\01\AS.jpg
 ~~~
 
 # 修改页脚
-1、将主题的./themes/hugo-PaperMod/layouts/partials/footer.html文件拷贝到hugo项目的根目录的./layouts/partials/ 文件夹中去，然后将
+## 1、
+将主题的./themes/hugo-PaperMod/layouts/partials/footer.html文件拷贝到hugo项目的根目录的./layouts/partials/ 文件夹中去，然后将
 \<footer class="footer"\> \</footer\>
 标签中的内容替换为如下内容：
 ~~~
@@ -461,8 +466,6 @@ img\01\AS.jpg
 
 ~~~
 
-#
-#
-#
+
 
  
