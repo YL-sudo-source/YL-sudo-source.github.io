@@ -65,6 +65,8 @@
 {{- $class = "post-entry tag-entry" }}
 {{- end }}
 
+
+
 <article class="{{ $class }}">
   {{- $isHidden := (.Param "cover.hiddenInList") | default (.Param "cover.hidden") | default false }}
   {{- partial "cover.html" (dict "cxt" . "IsSingle" false "isHidden" $isHidden) }}
@@ -122,6 +124,7 @@
       {{- if (.Param "ShowPageNums") }}
       {{- sub $paginator.PageNumber 1 }}/{{ $paginator.TotalPages }}
       {{- end }}
+
     </a>
     {{- end }}
     {{- if $paginator.HasNext }}
@@ -135,6 +138,7 @@
   </nav>
 </footer>
 {{- end }}
+
 
 {{- end }}{{/* end profileMode */}}
 

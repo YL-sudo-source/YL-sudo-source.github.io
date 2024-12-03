@@ -1,108 +1,126 @@
+/* 首个条目的样式 */
 .first-entry {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    min-height: 0px;
-    margin: var(--gap) 0 calc(var(--gap) * 2) 0;
+    position: relative; /* 设置相对定位 */
+    display: flex; /* 设置为弹性盒布局 */
+    flex-direction: column; /* 设置主轴为垂直方向 */
+    justify-content: center; /* 设置项目垂直方向居中对齐 */
+    min-height: 0px; /* 设置最小高度为0px */
+    margin: var(--gap) 0 calc(var(--gap) * 2) 0; /* 设置上下外边距，底部为 gap 的两倍 */
 }
 
+/* 条目头部的样式 */
 .first-entry .entry-header {
-    overflow: hidden;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 3;
+    overflow: hidden; /* 隐藏溢出部分 */
+    display: -webkit-box; /* 使用 Webkit 样式的盒子布局 */
+    -webkit-box-orient: vertical; /* 设置 Webkit 盒子布局方向为垂直 */
+    -webkit-line-clamp: 3; /* 设置文本显示为最多 3 行 */
 }
 
+/* 条目标题的样式 */
 .first-entry .entry-header h1 {
-    font-size: 34px;
-    line-height: 1.3;
+    font-size: 34px; /* 设置字体大小为 34px */
+    line-height: 1.3; /* 设置行高为 1.3 */
 }
 
+/* 条目内容的样式 */
 .first-entry .entry-content {
-    margin: 14px 0;
-    font-size: 16px;
-    -webkit-line-clamp: 3;
+    margin: 14px 0; /* 设置上下外边距为 14px */
+    font-size: 16px; /* 设置字体大小为 16px */
+    -webkit-line-clamp: 3; /* 设置文本显示为最多 3 行 */
 }
 
+/* 条目底部的样式 */
 .first-entry .entry-footer {
-    font-size: 14px;
+    font-size: 14px; /* 设置字体大小为 14px */
 }
 
+/* 在 home-info 类下，条目内容样式的改变 */
 .home-info .entry-content {
-    -webkit-line-clamp: unset;
+    -webkit-line-clamp: unset; /* 取消行数限制，显示所有内容 */
 }
 
+/* 常规条目的样式 */
 .post-entry {
-    position: relative;
-    margin-bottom: var(--gap);
-    padding: var(--gap);
-    background: var(--entry);
-    border-radius: var(--radius);
-    transition: transform 0.1s;
-    border: 1px solid var(--border);
+    position: relative; /* 设置相对定位 */
+    margin-bottom: var(--gap); /* 设置底部外边距为 gap */
+    padding: var(--gap); /* 设置内边距为 gap */
+    background: var(--entry); /* 设置背景色为自定义变量 --entry */
+    border-radius: var(--radius); /* 设置圆角为自定义变量 --radius */
+    transition: transform 0.1s; /* 设置变换的过渡效果，时长 0.1 秒 */
+    border: 1px solid var(--border); /* 设置边框为 1px 实线，颜色为自定义变量 --border */
 }
 
-.post-entry:active {                                    
-    transform: scale(0.96);                         
+/* 当条目被点击时的缩放效果 */
+.post-entry:active {                                  
+    transform: scale(0.96); /* 点击时，条目缩放为 96% */
 }
 
+/* 标签条目封面的样式 */
 .tag-entry .entry-cover {
-    display: none;
+    display: none; /* 隐藏封面 */
 }
 
+/* 条目头部 h2 的样式 */
 .entry-header h2 {
-    font-size: 24px; 
-    line-height: 1.3;
+    font-size: 24px; /* 设置字体大小为 24px */
+    line-height: 1.3; /* 设置行高为 1.3 */
 }
 
+/* 常规条目内容的样式 */
 .entry-content {
-    margin: 8px 0;
-    color: var(--secondary);
-    font-size: 14px;
-    line-height: 1.6;
-    overflow: hidden;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 2;
+    margin: 8px 0; /* 设置上下外边距为 8px */
+    color: var(--secondary); /* 设置字体颜色为自定义变量 --secondary */
+    font-size: 14px; /* 设置字体大小为 14px */
+    line-height: 1.6; /* 设置行高为 1.6 */
+    overflow: hidden; /* 隐藏溢出内容 */
+    display: -webkit-box; /* 使用 Webkit 样式的盒子布局 */
+    -webkit-box-orient: vertical; /* 设置 Webkit 盒子布局方向为垂直 */
+    -webkit-line-clamp: 2; /* 设置文本显示为最多 2 行 */
 }
 
+/* 条目底部样式 */
 .entry-footer {
-    color: var(--secondary);
-    font-size: 13px;
+    color: var(--secondary); /* 设置字体颜色为自定义变量 --secondary */
+    font-size: 13px; /* 设置字体大小为 13px */
 }
 
+/* 条目链接的绝对定位样式 */
 .entry-link {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
+    position: absolute; /* 设置绝对定位 */
+    left: 0; /* 左边距为 0 */
+    right: 0; /* 右边距为 0 */
+    top: 0; /* 上边距为 0 */
+    bottom: 0; /* 底边距为 0 */
 }
 
+/* 条目提示信息的样式 */
 .entry-hint {
-    color: var(--secondary);
+    color: var(--secondary); /* 设置字体颜色为自定义变量 --secondary */
 }
 
+/* 条目父级提示信息容器的样式 */
 .entry-hint-parent {
-    display: flex;
-    justify-content: space-between;
+    display: flex; /* 设置为弹性盒布局 */
+    justify-content: space-between; /* 在主轴方向上分散对齐 */
 }
 
+/* 条目封面样式 */
 .entry-cover {
-    font-size: 14px;
-    margin-bottom: var(--gap);
-    text-align: center;
+    font-size: 14px; /* 设置字体大小为 14px */
+    margin-bottom: var(--gap); /* 设置底部外边距为 gap */
+    text-align: center; /* 设置文本居中对齐 */
 }
 
+/* 条目封面图片的样式 */
 .entry-cover img {
-    border-radius: var(--radius);
-    pointer-events: none;
-    width: 100%;
-    height: auto;
+    border-radius: var(--radius); /* 设置圆角为自定义变量 --radius */
+    pointer-events: none; /* 禁用图片的鼠标事件 */
+    width: 100%; /* 设置图片宽度为 100% */
+    height: auto; /* 设置图片高度自动调整 */
 }
 
+/* 条目封面链接的样式 */
 .entry-cover a {
-    color: var(--secondary);
-    box-shadow: 0 1px 0 var(--primary);
+    color: var(--secondary); /* 设置链接的颜色为自定义变量 --secondary */
+    box-shadow: 0 1px 0 var(--primary); /* 设置链接的阴影效果，颜色为自定义变量 --primary */
 }

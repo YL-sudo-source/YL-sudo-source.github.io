@@ -1,0 +1,82 @@
+/* 目录容器样式 */
+.toc {
+    margin: 0 2px 40px 2px; /* 设置外边距，上、右、下、左依次为0、2px、40px、2px */
+    border: 1px solid var(--border); /* 设置边框为1px实线，颜色为自定义变量 --border */
+    background: var(--entry); /* 设置背景色为自定义变量 --entry */
+    border-radius: var(--radius); /* 设置圆角为自定义变量 --radius */
+    padding: 0.4em; /* 设置内边距为0.4em */
+}
+
+/* 宽模式下目录容器样式 */
+.toc-container.wide {
+    position: absolute; /* 设置绝对定位 */
+    height: 100%; /* 设置高度为100% */
+    border-right: 1px solid var(--border); /* 设置右边框为1px实线，颜色为自定义变量 --border */
+    left: calc((var(--toc-width) + var(--gap)) * -1); /* 设置左边距为 --toc-width 和 --gap 的和的负值 */
+    top: calc(var(--gap) * 2); /* 设置上边距为 --gap 的两倍 */
+    width: var(--toc-width); /* 设置宽度为自定义变量 --toc-width */
+}
+
+/* 宽模式下目录内容样式 */
+.wide .toc {
+    position: sticky; /* 设置为粘性定位 */
+    top: var(--gap); /* 设置顶部间距为 --gap */
+    border: unset; /* 去除边框 */
+    background: unset; /* 去除背景色 */
+    border-radius: unset; /* 去除圆角 */
+    width: 100%; /* 设置宽度为100% */
+    margin: 0 2px 40px 2px; /* 设置外边距，上、右、下、左依次为0、2px、40px、2px */
+}
+
+/* 目录详情展开时的样式 */
+.toc details summary {
+    cursor: zoom-in; /* 鼠标悬停时显示放大镜指针 */
+    margin-inline-start: 20px; /* 设置左边距为20px */
+    padding: 12px 0; /* 设置上下内边距为12px，左右内边距为0 */
+}
+
+/* 展开状态下的目录项样式 */
+.toc details[open] summary {
+    font-weight: 500; /* 设置字体粗细为500 */
+}
+
+/* 宽模式下目录内容的内边距 */
+.toc-container.wide .toc .inner {
+    margin: 0; /* 去除外边距 */
+}
+
+/* 当前激活目录项的样式 */
+.active {
+    font-size: 110%; /* 设置字体大小为原来的110% */
+    font-weight: 600; /* 设置字体粗细为600 */
+}
+
+/* 目录列表项的样式 */
+.toc ul {
+    list-style-type: circle; /* 设置列表项标记为圆圈 */
+}
+
+/* 目录内部分的内边距和字体大小 */
+.toc .inner {
+    margin: 0 0 0 20px; /* 设置外边距，左边为20px，其余为0 */
+    padding: 0px 15px 15px 20px; /* 设置内边距，上为0px，右为15px，下为15px，左为20px */
+    font-size: 16px; /* 设置字体大小为16px */
+}
+
+/* 目录子项的样式 */
+.toc li ul {
+    margin-inline-start: calc(var(--gap) * 0.5); /* 设置左边距为 --gap 的一半 */
+    list-style-type: none; /* 去除子列表的标记 */
+}
+
+/* 目录项的样式 */
+.toc li {
+    list-style: none; /* 去除默认的列表项标记 */
+    font-size: 0.95rem; /* 设置字体大小为0.95rem */
+    padding-bottom: 5px; /* 设置底部内边距为5px */
+}
+
+/* 目录项链接的悬停效果 */
+.toc li a:hover {
+    color: var(--secondary); /* 设置链接悬停时的颜色为自定义变量 --secondary */
+}

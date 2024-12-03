@@ -1,0 +1,53 @@
+ /* 相关推荐设置 */
+/* 使用 flexbox 布局，使主内容和右侧栏并排显示 */
+/* .content-wrapper { */
+   /*  display: flex; /* 启用 flexbox 布局 */
+   /*  justify-content: space-between; /* 主内容和右侧栏之间的间距 */
+  /* } */
+  
+  /* 主内容区域的样式 */
+  /* .main-content { */
+    /* width: 10%; 主内容区域占据页面宽度的 75% */
+  /* } */
+  
+  /* 右侧栏的样式 */
+  /* .sidebar { */
+    /* width: 20%; 右侧栏占据页面宽度的 20% */
+    /* margin-left: 20px; 右侧栏与主内容之间的间距 */
+  /* } */
+  
+  /* 推荐部分的样式 */
+  /* .related-section {
+    background-color: #f9f9f9; /* 设置推荐部分的背景色 */
+    /* padding: 5px; 给推荐部分添加内边距 */
+    /* border-radius: 8px; 为推荐部分添加圆角效果 */
+    /* box-shadow: 0 2px 5px #e70606d5; 给推荐部分添加阴影效果，颜色为红色带透明度 */
+  /* } */ 
+  
+  /* 推荐部分标题的样式 */
+  /* .related-section h3 { */
+    /* font-size: 20px; 设置推荐部分标题的字体大小
+    font-weight: bold; 设置推荐部分标题为加粗
+  }
+   */
+  /* 推荐部分列表的样式
+  .related-section ul {
+    list-style-type: none; /* 去除列表项的默认符号 */
+    /* padding: 10; 去除列表的内边距 */
+  /* } */ 
+  
+  /* 每个推荐链接项的样式 */
+  /* .related-section li { */
+    /* margin-bottom: 10px; 每个推荐项之间的间距 */
+  /* } */
+  
+  /* 推荐链接的样式 */
+  /* .related-section a { */
+    /* color: #333; 设置推荐链接的字体颜色为深灰色 */
+    /* text-decoration: none; 去除推荐链接的下划线 */
+  /* } */
+  
+  /* 鼠标悬停时，推荐链接的样式 */
+   .related-section a:hover {
+    text-decoration: underline; /* 鼠标悬停时为推荐链接添加下划线 */
+   } 

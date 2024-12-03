@@ -110,7 +110,7 @@ lastmod: 2023-02-14T00:40:08+08:00
 ~~~
 img\01\AS.jpg
 # 侧边目录
-## 1、
+## 1、添加toc.html文件
 在项目目录layouts/partials下添加toc.html文件
 ~~~
 {{- $headers := findRE "<h[1-6].*?>(.|\n])+?</h[1-6]>" .Content -}}
@@ -269,7 +269,7 @@ img\01\AS.jpg
 {{- end }}
 
 ~~~
-## 2、
+## 2、添加blank.css文件
 在项目目录assets/css/extended下添加blank.css文件，内容如下：
 ~~~
 :root {
@@ -359,6 +359,13 @@ img\01\AS.jpg
     color: var(--secondary);
 }
 
+~~~
+## 3、single.html添加内容
+在single.html添加
+~~~
+  {{- if (.Param "ShowToc") }}
+  {{- partial "toc.html" . }}
+  {{- end }}
 ~~~
 # 相关推荐
 ## 1、
@@ -466,6 +473,35 @@ img\01\AS.jpg
 
 ~~~
 
+# 修改主题原色
+## 1、
+在中添加assets/css/extended/theme-vars-override.css 
+添加
+~~~
+:root {
+    --theme: #fff;
+    --entry: #cfcfff;
+    --primary: rgba(0, 0, 106, 0.88);
+    --secondary: rgba(0, 0, 80, 0.78);
+    --tertiary: rgba(0, 0, 106, 0.16);
+    --content: rgba(0, 0, 60, 0.88);
+    --hljs-bg: #1c1d21;
+    --code-bg: #f5f5f5;
+    --border: #eee;
+}
+
+.dark {
+    --theme: #101c7a;
+    --entry: #202062;
+    --primary: rgba(235, 235, 255, 0.96);
+    --secondary: rgba(235, 235, 255, 0.66);
+    --tertiary: rgba(1, 1, 5, 0.32);
+    --content: rgba(235, 235, 255, 0.82);
+    --hljs-bg: #2e2e33;
+    --code-bg: #37383e;
+    --border: #446;
+}
+~~~
 
 
  

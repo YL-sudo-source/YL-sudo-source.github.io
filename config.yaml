@@ -1,16 +1,19 @@
 baseURL: ""
 languageCode: zh-cn
 title: My New Hugo Site
-# paginate: 5
+
 theme: PaperMod
 
 services:
   googleAnalytics:
     ID: G-DWRBNRT80B
 
+pagination:
+  pagerSize: 50 # 每页显示 10 篇文章
+
 params:    
   homeInfoParams:
-    Title: "Hey Guys 👋"   # 表情\U0001F44B
+    #Title: "Hey Guys 👋"   # 表情\U0001F44B
     Content: Welcome to my blog
 
     #  ● [SonnyCalcr's Notion](https://sonnycalcr.notion.site/)
@@ -57,9 +60,6 @@ params:
   enableSitemap: true # 允许 sitemap.xml
   comments: true # 评论
   related: true           # 是否展示相关文章
-  # UseHugoToc: true                    #是否使用 Hugo 自动生成的目录
-  # toc: true                           # 主题目录功能    关闭 UseHugoToc 后，这个才有效
-
   hideSummary:  true          #是否隐藏文章的摘要
   # images: ["https://i.postimg.cc/7hwBy7VS/calcr.png"] # 缺省的图片，比如，博客的封面
   DateFormat: "2006-01-02" # 这个时间是作者自己写的，只能这样写
@@ -112,6 +112,10 @@ menu:
       name: 图集
       pageRef: 图集/
       weight: 10  
+    - identifier : 其他
+      name: 其他
+      pageRef: 其他/
+      weight: 11  
     - identifier : search
       name: 搜索
       pageRef: search/

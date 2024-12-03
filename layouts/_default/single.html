@@ -30,6 +30,7 @@
   </header>
   {{- $isHidden := (.Param "cover.hiddenInSingle") | default (.Param "cover.hidden") | default false }}
   {{- partial "cover.html" (dict "cxt" . "IsSingle" true "isHidden" $isHidden) }}
+  <!-- 目录 -->
   {{- if (.Param "ShowToc") }}
   {{- partial "toc.html" . }}
   {{- end }}
@@ -44,7 +45,7 @@
   
   <!-- 推荐部分 Related Section -->
   <div class="sidebar">
-    <hr />
+    <!-- <hr /> -->
   </div>
   {{ partial "related.html" . }}
   <!-- /Related Section -->

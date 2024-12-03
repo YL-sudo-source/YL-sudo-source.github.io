@@ -1,0 +1,19 @@
+<div class="card-widget card-recent-post">
+    <div class="item-headline">
+        <i class="anzhiyufont anzhiyu-icon-history"></i>
+        <span>{{ i18n "recent_posts" }}</span> <!-- 使用多语言支持，"recent_posts" 需要在你的 i18n 文件中定义 -->
+    </div>
+    <div class="aside-list">
+        {{ range first 5 (where .Site.RegularPages "Type" "post") }}
+        <div class="aside-list-item">
+            <a class="thumbnail" href="{{ .Permalink }}" title="{{ .Title }}">
+                <img src="{{ .Params.thumbnail }}" alt="{{ .Title }}" />
+            </a>
+            <div class="content">
+                <a class="title" href="{{ .Permalink }}" title="{{ .Title }}">{{ .Title }}</a>
+                <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z" }}" title="更新于 {{ .Date }}">{{ .Date.Format "2006-01-02" }}</time>
+            </div>
+        </div>
+        {{ end }}
+    </div>
+</div>
