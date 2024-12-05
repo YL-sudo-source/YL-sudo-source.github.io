@@ -1,46 +1,40 @@
-/* 控制换页页码 */
+控制换页页码
 
 /* 确保分页容器本身是居中的 */
 .pagination {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px; /* 页码间距，可以根据需要调整 */
+    display: flex; /* 使用flex布局来排列元素 */
+    justify-content: center; /* 将分页内容水平居中 */
+    align-items: center; /* 将分页内容垂直居中 */
+    gap: 10px; /* 页码之间的间距，可以根据需要调整 */
     margin: 20px 0; /* 分页容器上下的间距 */
-    /* margin-top: 20px;
-    margin-bottom: 30px; */
 }
 
 /* 页面项 (每个页码) */
 .pagination .page-item {
-    display: inline-block;
-    padding: 5px 10px;
+    display: inline-block; /* 设置为内联块元素，允许设置宽高 */
+    padding: 5px 10px; /* 为每个页码添加内边距 */
     margin: 0; /* 去掉额外的边距 */
-    cursor: pointer;
-    font-size: 32px;
-    /* padding-left: 15px;
-    padding-right: 15px;
-    padding-top: 10px;
-    padding-bottom: 10px; */
+    cursor: pointer; /* 设置鼠标悬停时显示为可点击状态 */
+    font-size: 32px; /* 设置页码文字的字体大小 */
 }
 
 /* 分页链接 */
 .pagination .page-link {
-    text-decoration: none;
-    color: #007bff;
-    padding: 5px 10px;
+    text-decoration: none; /* 去掉链接的下划线 */
+    color: #007bff; /* 设置分页链接的字体颜色 */
+    padding: 5px 10px; /* 为分页链接添加内边距 */
     font-size: 16px; /* 设置分页链接的字体大小 */
 }
 
 /* 活跃页码 */
 .pagination .active {
-    background-color: #007bff;
-    color: white;
-    border-radius: 5px;
+    background-color: #007bff; /* 设置当前页的背景色 */
+    color: white; /* 设置当前页的文字颜色 */
+    border-radius: 5px; /* 设置圆角效果 */
 }
 
 /* 禁用页码 */
 .pagination .disabled {
-    color: #ccc;
-    cursor: not-allowed;
+    color: #ccc; /* 设置禁用页码的文字颜色 */
+    cursor: not-allowed; /* 设置禁用状态下的鼠标样式 */
 }

@@ -115,7 +115,6 @@
 </article>
 {{- end }}
 
-{{ $paginator := .Paginate .Pages }} <!-- 初始化分页对象 -->
 {{ partial "pagination.html" . }} <!-- 传递当前上下文 -->
 
 {{- end }}{{/* end profileMode */}}
