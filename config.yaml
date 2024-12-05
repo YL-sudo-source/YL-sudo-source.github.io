@@ -9,7 +9,7 @@ services:
     ID: G-DWRBNRT80B
 
 pagination:
-  pagerSize: 50 # 每页显示 10 篇文章
+  pagerSize: 40 # 每页显示 10 篇文章
 
 params:    
   homeInfoParams:

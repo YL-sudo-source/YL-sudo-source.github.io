@@ -606,17 +606,16 @@ img\01\AS.jpg
 ~~~
 
 
-## 添加css 
+## 添加css   
+assets\css\extended\pagination.css
 ~~~
-控制换页页码
-
 /* 确保分页容器本身是居中的 */
 .pagination {
-    display: flex; /* 使用flex布局来排列元素 */
+    display: flex; /* 使用 flex 布局来排列元素 */
     justify-content: center; /* 将分页内容水平居中 */
     align-items: center; /* 将分页内容垂直居中 */
-    gap: 10px; /* 页码之间的间距，可以根据需要调整 */
-    margin: 20px 0; /* 分页容器上下的间距 */
+    gap: 15px; /* 页码之间的间距，可以根据需要调整 */
+    margin: 20px auto; /* 分页容器上下的间距 */
 }
 
 /* 页面项 (每个页码) */
@@ -625,7 +624,8 @@ img\01\AS.jpg
     padding: 5px 10px; /* 为每个页码添加内边距 */
     margin: 0; /* 去掉额外的边距 */
     cursor: pointer; /* 设置鼠标悬停时显示为可点击状态 */
-    font-size: 32px; /* 设置页码文字的字体大小 */
+    font-size: 16px; /* 设置页码文字的字体大小 */
+    border-radius: 5px; /* 为每个页码设置圆角效果 */
 }
 
 /* 分页链接 */
@@ -634,6 +634,7 @@ img\01\AS.jpg
     color: #007bff; /* 设置分页链接的字体颜色 */
     padding: 5px 10px; /* 为分页链接添加内边距 */
     font-size: 16px; /* 设置分页链接的字体大小 */
+    display: inline-block; /* 让链接保持与块级元素一样的显示方式 */
 }
 
 /* 活跃页码 */
@@ -641,6 +642,7 @@ img\01\AS.jpg
     background-color: #007bff; /* 设置当前页的背景色 */
     color: white; /* 设置当前页的文字颜色 */
     border-radius: 5px; /* 设置圆角效果 */
+    font-weight: bold; /* 设置当前页加粗 */
 }
 
 /* 禁用页码 */
@@ -648,6 +650,22 @@ img\01\AS.jpg
     color: #ccc; /* 设置禁用页码的文字颜色 */
     cursor: not-allowed; /* 设置禁用状态下的鼠标样式 */
 }
+
+/* 分页按钮（上一页/下一页） */
+.pagination .page-item a.page-link {
+    color: #007bff; /* 设置按钮字体颜色 */
+}
+
+.pagination .page-item.disabled a.page-link {
+    color: #ccc; /* 禁用按钮的颜色 */
+    cursor: not-allowed;
+}
+
+.pagination .page-item a.page-link:hover {
+    background-color: #f8f9fa; /* 鼠标悬停时，分页按钮的背景色 */
+    border-radius: 5px; /* 鼠标悬停时，分页按钮的圆角 */
+}
+
 
 ~~~
 
