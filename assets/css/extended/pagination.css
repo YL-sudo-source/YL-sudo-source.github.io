@@ -1,0 +1,46 @@
+/* 控制换页页码 */
+
+/* 确保分页容器本身是居中的 */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px; /* 页码间距，可以根据需要调整 */
+    margin: 20px 0; /* 分页容器上下的间距 */
+    /* margin-top: 20px;
+    margin-bottom: 30px; */
+}
+
+/* 页面项 (每个页码) */
+.pagination .page-item {
+    display: inline-block;
+    padding: 5px 10px;
+    margin: 0; /* 去掉额外的边距 */
+    cursor: pointer;
+    font-size: 32px;
+    /* padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px; */
+}
+
+/* 分页链接 */
+.pagination .page-link {
+    text-decoration: none;
+    color: #007bff;
+    padding: 5px 10px;
+    font-size: 16px; /* 设置分页链接的字体大小 */
+}
+
+/* 活跃页码 */
+.pagination .active {
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+}
+
+/* 禁用页码 */
+.pagination .disabled {
+    color: #ccc;
+    cursor: not-allowed;
+}

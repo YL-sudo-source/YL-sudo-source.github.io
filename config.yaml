@@ -63,7 +63,8 @@ params:
   hideSummary:  true          #是否隐藏文章的摘要
   # images: ["https://i.postimg.cc/7hwBy7VS/calcr.png"] # 缺省的图片，比如，博客的封面
   DateFormat: "2006-01-02" # 这个时间是作者自己写的，只能这样写
-
+  # profileMode.enabled: false  
+ 
   assets:
     # disableHLJS: true # to disable highlight.js
     disableFingerprinting: true

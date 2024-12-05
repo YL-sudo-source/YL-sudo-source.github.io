@@ -1,0 +1,95 @@
+<!-- 换页 -->
+{{- $paginator := .Paginate .Pages }} 
+
+<!-- 分页容器，居中 -->
+<div class="text-center">
+    <div class="pagination">
+
+        <!-- 页码 -->
+        {{ if (le $paginator.TotalPages 5) }}
+            {{ $current_num := $paginator.PageNumber }}
+            {{ range $i, $pager := $paginator.Pagers }}
+                {{ if (eq $current_num $pager.PageNumber) }}
+                    <div class="page-item active">{{ $pager.PageNumber }}</div>
+                {{ else }}
+                    <a class="page-link" href="{{ $pager.URL }}">
+                        <div class="page-item">{{ $pager.PageNumber }}</div>
+                    </a>
+                {{ end }}
+            {{ end }}
+        {{ else }}
+            {{ $first_page_num := 1 }}
+            {{ $second_page_num := 2 }}
+            {{ $last_page_num := $paginator.TotalPages }}
+            {{ $second_last_page_num := (add $paginator.TotalPages -1) }}
+            {{ $third_last_page_num := (add $paginator.TotalPages -2) }}
+            {{ $current_num := $paginator.PageNumber }}
+
+            <!-- 第 1 页 -->
+            {{ if (eq $current_num $first_page_num) }}
+                <div class="page-item active">{{ $current_num }}</div>
+            {{ else }}
+                <a class="page-link" href="{{ $paginator.First.URL }}">
+                    <div class="page-item">1</div>
+                </a>
+            {{ end }}
+
+            <!-- 第 2 页 -->
+            {{ if (eq $current_num $second_page_num) }}
+                <div class="page-item active">{{ $current_num }}</div>
+            {{ else if (le $current_num 3)}}
+                <a class="page-link" href="{{ $paginator.First.Next.URL }}">
+                    <div class="page-item">{{ $second_page_num }}</div>
+                </a>
+            {{ else }}
+                <div class="page-item">...</div>
+            {{ end }}
+
+            <!-- 第 3 页 -->
+            {{ if (le $current_num $second_page_num)}}
+                <a class="page-link" href="{{ $paginator.First.Next.Next.URL }}">
+                    <div class="page-item">3</div>
+                </a>
+            {{ else if (ge $current_num $second_last_page_num) }}
+                <a class="page-link" href="{{ $paginator.Last.Prev.Prev.URL }}">
+                    <div class="page-item">{{ $third_last_page_num }}</div>
+                </a>
+            {{ else }}
+                <div class="page-item active">{{ $current_num }}</div>
+            {{ end }}
+
+            <!-- 第 4 页 -->
+            {{ if (eq $current_num $second_last_page_num) }}
+                <div class="page-item active">{{ $current_num }}</div>
+            {{ else if (ge $current_num $third_last_page_num) }}
+                <a class="page-link" href="{{ $paginator.Last.Prev.URL }}">
+                    <div class="page-item">{{ $second_last_page_num }}</div>
+                </a>
+            {{ else }}
+                <div class="page-item">...</div>
+            {{ end }}
+
+            <!-- 第 5 页 -->
+            {{ if (eq $current_num $last_page_num) }}
+                <div class="page-item active">{{ $current_num }}</div>
+            {{ else }}
+                <a class="page-link" href="{{ $paginator.Last.URL }}">
+                    <div class="page-item">{{ $last_page_num }}</div>
+                </a>
+            {{ end }}
+        {{ end }}
+
+        <!-- 下一页 -->
+        {{ if $paginator.HasNext }}
+            <a class="page-link" href="{{ $paginator.Next.URL }}">
+                <div class="page-item"> ></div>
+            </a>
+        {{ else }}
+            <div class="page-item disabled"> ></div>
+        {{ end }}
+        
+
+              
+
+    </div>
+</div>

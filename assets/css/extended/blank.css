@@ -133,6 +133,35 @@ article.first-entry.home-info {
 }
 
 
-  
-  
-  
+/*  */
+
+.pagination {
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+.pagination .page-item {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.pagination .page-item.active {
+    background-color: #3a6ba5;
+    color: #fff;
+}
+.pagination .page-item.disabled {
+    color: #919eb1;
+}
+.pagination a {
+    color: #21365c;
+    text-decoration: none;
+}
+.pagination .page-link .page-item:hover {
+    background-color: #f5f5f5;
+}
+
+/* 调整文末导航栏和评论区的距离 */
+/* .paginav {
+    margin-bottom: 45px;
+  } */

@@ -367,7 +367,7 @@ img\01\AS.jpg
   {{- partial "toc.html" . }}
   {{- end }}
 ~~~
-# 相关推荐
+# 设置相关推荐
 ## 1、
 创建一个 layouts/partials/related.html 文件填写一下代码
 ~~~
@@ -501,6 +501,154 @@ img\01\AS.jpg
     --code-bg: #37383e;
     --border: #446;
 }
+~~~
+
+# 修改换页-页码
+## 1、修改list.html文件
+将文件内的模板文件修改为{{ partial "pagination.html" . }}   来引用,创建pagination.html文件  路径为layouts\partials\pagination.html    添加以下代码
+~~~
+    <!-- 换页 -->
+{{- $paginator := .Paginate .Pages }} 
+
+<!-- 分页容器，居中 -->
+<div class="text-center">
+    <div class="pagination">
+
+        <!-- 页码 -->
+        {{ if (le $paginator.TotalPages 5) }}
+            {{ $current_num := $paginator.PageNumber }}
+            {{ range $i, $pager := $paginator.Pagers }}
+                {{ if (eq $current_num $pager.PageNumber) }}
+                    <div class="page-item active">{{ $pager.PageNumber }}</div>
+                {{ else }}
+                    <a class="page-link" href="{{ $pager.URL }}">
+                        <div class="page-item">{{ $pager.PageNumber }}</div>
+                    </a>
+                {{ end }}
+            {{ end }}
+        {{ else }}
+            {{ $first_page_num := 1 }}
+            {{ $second_page_num := 2 }}
+            {{ $last_page_num := $paginator.TotalPages }}
+            {{ $second_last_page_num := (add $paginator.TotalPages -1) }}
+            {{ $third_last_page_num := (add $paginator.TotalPages -2) }}
+            {{ $current_num := $paginator.PageNumber }}
+
+            <!-- 第 1 页 -->
+            {{ if (eq $current_num $first_page_num) }}
+                <div class="page-item active">{{ $current_num }}</div>
+            {{ else }}
+                <a class="page-link" href="{{ $paginator.First.URL }}">
+                    <div class="page-item">1</div>
+                </a>
+            {{ end }}
+
+            <!-- 第 2 页 -->
+            {{ if (eq $current_num $second_page_num) }}
+                <div class="page-item active">{{ $current_num }}</div>
+            {{ else if (le $current_num 3)}}
+                <a class="page-link" href="{{ $paginator.First.Next.URL }}">
+                    <div class="page-item">{{ $second_page_num }}</div>
+                </a>
+            {{ else }}
+                <div class="page-item">...</div>
+            {{ end }}
+
+            <!-- 第 3 页 -->
+            {{ if (le $current_num $second_page_num)}}
+                <a class="page-link" href="{{ $paginator.First.Next.Next.URL }}">
+                    <div class="page-item">3</div>
+                </a>
+            {{ else if (ge $current_num $second_last_page_num) }}
+                <a class="page-link" href="{{ $paginator.Last.Prev.Prev.URL }}">
+                    <div class="page-item">{{ $third_last_page_num }}</div>
+                </a>
+            {{ else }}
+                <div class="page-item active">{{ $current_num }}</div>
+            {{ end }}
+
+            <!-- 第 4 页 -->
+            {{ if (eq $current_num $second_last_page_num) }}
+                <div class="page-item active">{{ $current_num }}</div>
+            {{ else if (ge $current_num $third_last_page_num) }}
+                <a class="page-link" href="{{ $paginator.Last.Prev.URL }}">
+                    <div class="page-item">{{ $second_last_page_num }}</div>
+                </a>
+            {{ else }}
+                <div class="page-item">...</div>
+            {{ end }}
+
+            <!-- 第 5 页 -->
+            {{ if (eq $current_num $last_page_num) }}
+                <div class="page-item active">{{ $current_num }}</div>
+            {{ else }}
+                <a class="page-link" href="{{ $paginator.Last.URL }}">
+                    <div class="page-item">{{ $last_page_num }}</div>
+                </a>
+            {{ end }}
+        {{ end }}
+
+        <!-- 下一页 -->
+        {{ if $paginator.HasNext }}
+            <a class="page-link" href="{{ $paginator.Next.URL }}">
+                <div class="page-item"> ></div>
+            </a>
+        {{ else }}
+            <div class="page-item disabled"> ></div>
+        {{ end }}
+        
+
+              
+
+    </div>
+</div>
+
+~~~
+
+
+## 添加css 
+~~~
+控制换页页码
+
+/* 确保分页容器本身是居中的 */
+.pagination {
+    display: flex; /* 使用flex布局来排列元素 */
+    justify-content: center; /* 将分页内容水平居中 */
+    align-items: center; /* 将分页内容垂直居中 */
+    gap: 10px; /* 页码之间的间距，可以根据需要调整 */
+    margin: 20px 0; /* 分页容器上下的间距 */
+}
+
+/* 页面项 (每个页码) */
+.pagination .page-item {
+    display: inline-block; /* 设置为内联块元素，允许设置宽高 */
+    padding: 5px 10px; /* 为每个页码添加内边距 */
+    margin: 0; /* 去掉额外的边距 */
+    cursor: pointer; /* 设置鼠标悬停时显示为可点击状态 */
+    font-size: 32px; /* 设置页码文字的字体大小 */
+}
+
+/* 分页链接 */
+.pagination .page-link {
+    text-decoration: none; /* 去掉链接的下划线 */
+    color: #007bff; /* 设置分页链接的字体颜色 */
+    padding: 5px 10px; /* 为分页链接添加内边距 */
+    font-size: 16px; /* 设置分页链接的字体大小 */
+}
+
+/* 活跃页码 */
+.pagination .active {
+    background-color: #007bff; /* 设置当前页的背景色 */
+    color: white; /* 设置当前页的文字颜色 */
+    border-radius: 5px; /* 设置圆角效果 */
+}
+
+/* 禁用页码 */
+.pagination .disabled {
+    color: #ccc; /* 设置禁用页码的文字颜色 */
+    cursor: not-allowed; /* 设置禁用状态下的鼠标样式 */
+}
+
 ~~~
 
 
